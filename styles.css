@@ -50,6 +50,7 @@ body {
 }
 
 .space-100vh {
+  z-index: 122;
   height: 100vh;
   background-color: green;
 }
