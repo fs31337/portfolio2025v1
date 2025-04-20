@@ -23,5 +23,14 @@ ScrollTrigger.create({
   animation: tween,
   scrub: 1,
   invalidateOnRefresh: true,
-  markers: false,
+  markers: true,
+});
+
+ScrollTrigger.create({
+  trigger: "#home",
+  pin: "#about",
+  start: "top top",
+  end: "bottom top",
+  scrub: true,
+  pinSpacing: false,
 });
