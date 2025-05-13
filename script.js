@@ -25,6 +25,7 @@ ScrollTrigger.create({
   invalidateOnRefresh: true,
 });
 
+/**Home Scroll */
 ScrollTrigger.create({
   trigger: "#home",
   pin: "#about",
@@ -32,4 +33,19 @@ ScrollTrigger.create({
   end: "bottom top",
   scrub: true,
   pinSpacing: false,
+});
+
+/** Contact */
+gsap.to(".normal .marquee-track", {
+  xPercent: -50,
+  duration: 10,
+  ease: "linear",
+  repeat: -1,
+});
+
+gsap.to(".inverted .marquee-track", {
+  xPercent: 50,
+  duration: 10,
+  ease: "linear",
+  repeat: -1,
 });

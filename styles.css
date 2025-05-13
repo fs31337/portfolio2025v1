@@ -22,15 +22,11 @@ body {
   width: fit-content;
   display: flex;
   flex-wrap: nowrap;
-}
-
-.projects h3 {
-  font-family: "Staatliches", cursive;
-  font-size: 100px;
-  flex-shrink: 0;
-  color: black;
-  width: 100vw;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 .lightBG {
@@ -50,9 +46,9 @@ body {
 }
 
 .space-100vh {
-  z-index: 122;
+  z-index: 1;
   height: 100vh;
-  background-color: green;
+  background-color: black;
 }
 
 .home-section {
@@ -64,6 +60,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave debajo */
 }
 .about-me {
   position: relative;
@@ -71,12 +68,10 @@ body {
   background-color: #fff;
   color: #000;
   height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 4rem 2rem;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -100,13 +95,23 @@ body {
   background-color: black;
   color: white;
   height: 100vh;
-  width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between; /* Uno arriba, otro abajo */
   align-items: center;
-  text-align: center;
-  padding: 4rem 2rem;
   font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+.contact-line {
+  font-size: 10vw; /* Escalable y en una línea */
+  font-weight: 800;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.inverted {
+  transform: rotate(180deg);
 }
 .heading {
   font-size: 220px;
@@ -122,10 +127,33 @@ body {
   margin-top: 2.5rem;
 }
 .project {
+  display: flex;
   width: 100vw;
   height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+.project p {
+  font-size: 2rem; /* ~32px */
+  font-weight: 400;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.project h1 {
+  font-size: 3rem; /* ~48px */
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+.project article {
+  max-width: 1000px;
+  font-size: 2rem; /* ~32px */
+  font-weight: 400;
+  line-height: 1.6;
+}
+.pp {
+  font-size: 10px;
+}
 .icon {
   margin-right: 1.75rem;
 }
@@ -148,42 +176,29 @@ body {
   width: 100px;
   height: 95px;
 }
-
 #p1 {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 #p2 {
   background-color: white;
   color: black;
 }
 #p3 {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 #p4 {
   background-color: white;
   color: black;
 }
 #p5 {
-  background-color: white;
-  color: black;
+  background-color: red;
+  color: white;
 }
 
 html {
   scroll-behavior: smooth; /* Scroll suave para todos los anclajes */
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(21, 21, 30, 0.9);
-  padding: 1rem 2rem;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
 }
 
 .navbar ul {
@@ -204,4 +219,26 @@ html {
 
 .navbar li a:hover {
   text-decoration: underline;
+}
+.project-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: red;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
 }
